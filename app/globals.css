@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/globals.css */
+.handwriting-font {
+    font-family: 'Dancing Script';
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+.resume-preview {
+  margin: 20px;
+  font-size: 14px; /* Adjust font size for better fit */
+  line-height: 1.5; /* Improve readability */
+  max-width: 100%;
+  page-break-before: always;
+}
+
+.resume-preview img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media print {
+  /* Ensure the content fits within printable area on paper */
+  body {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .resume-preview {
+    font-size: 12px; /* Smaller font for print */
+    width: 100%;
+    page-break-before: always;
+  }
+  
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+}
